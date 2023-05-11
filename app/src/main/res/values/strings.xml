@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="episode_air_date">Air Date: %1$s</string>
+    <string name="episode_season">Season: %1$s</string>
+</resources>
