@@ -6,9 +6,6 @@ A simple Android app to learn more about the Rick and Morty television show.
 ### Rick and Morty API documentation
 https://rickandmortyapi.com/documentation
 
-### Project setup
-The only setup needed is to open the project in Android Studio. No special project setup required.
-
 ## Tasks: bugs and features
 
 ### Let's address the initial crash
@@ -25,3 +22,7 @@ Currently when you tap on a character, you won’t see actual character details,
 
 ### Optional (Open Task): Choose your own feature!
 Anything is fair game. Paginated scroll, new UIs, adding your favorite 3rd party library, tests… whatever you think shows off your Android skills!
+
+## Addional Info
+### Project setup
+The only setup needed is to open the project in Android Studio. No special project setup required.
