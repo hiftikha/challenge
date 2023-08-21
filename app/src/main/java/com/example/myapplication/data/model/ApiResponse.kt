@@ -1,6 +1,7 @@
 package com.example.myapplication.data.model
 
 import android.os.Parcelable
+import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
 
 data class ApiResponse<T>(val info: Info, val results: T)
@@ -28,7 +29,9 @@ data class Character(
 data class Episode(
     val id: Int,
     val name: String,
+    @SerializedName("air_date")
+    val airDate: String,
     val episode: String,
-    val characters: List<Character>,
+    val characters: List<String>,
     val created: String
 ): Parcelable

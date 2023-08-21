@@ -15,7 +15,11 @@ class Repository(private val apiService: ApiService) {
             apiService.getCharacters()
         }
     }
-
+    suspend fun getCharacterById(id: Int): Response<Character> {
+        return withContext(Dispatchers.IO) {
+            apiService.getCharacterById(id)
+        }
+    }
     suspend fun getEpisodes(): Response<ApiResponse<List<Episode>>> {
         return withContext(Dispatchers.IO) {
             apiService.getEpisodes()

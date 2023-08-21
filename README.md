@@ -9,10 +9,11 @@ https://rickandmortyapi.com/documentation
 ## Tasks: bugs and features
 
 ### Let's address the initial crash
-The app will crash at runtime when you launch the app on your emulator or device. Fix it! Hint: look at Logcat and consult the API documentation.
+1. The app will crash at runtime when you launch the app on your emulator or device. Fix it! Hint: look at Logcat and consult the API documentation.
 
 ### Add a feature #1: Display episode details
-When using the app, you will notice you can click on an episode to find more details about the episode. You will notice there are some issues though. Hint: look at how the episode is passed into the fragment.
+When using the app, you will notice you can click on an episode to find more details about the episode.
+You will notice there are some issues though. Hint: look at how the episode is passed into the fragment.
 
 ### Add a feature #2: Filter characters for specific episode
 You will notice when you browse characters for a specific episode… you receive characters for ALL episodes. Modify the app to only return characters relevant to the specific episode.
