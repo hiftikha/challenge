@@ -1,0 +1,65 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <ImageView
+        android:id="@+id/character_image"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/character_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:paddingTop="32dp"
+        android:textAlignment="center"
+        android:hint="@string/character_name"
+        />
+
+    <TextView
+        android:id="@+id/character_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/character_gender"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/character_species"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/character_origin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+
+    <TextView
+        android:id="@+id/character_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+
+    </LinearLayout>

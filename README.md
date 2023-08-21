@@ -9,7 +9,7 @@ https://rickandmortyapi.com/documentation
 ## Tasks: bugs and features
 
 ### Let's address the initial crash
-1. The app will crash at runtime when you launch the app on your emulator or device. Fix it! Hint: look at Logcat and consult the API documentation.
+The app will crash at runtime when you launch the app on your emulator or device. Fix it! Hint: look at Logcat and consult the API documentation.
 
 ### Add a feature #1: Display episode details
 When using the app, you will notice you can click on an episode to find more details about the episode.

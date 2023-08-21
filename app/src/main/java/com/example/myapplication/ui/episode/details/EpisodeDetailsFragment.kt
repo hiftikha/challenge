@@ -15,6 +15,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
+import com.example.myapplication.data.model.Character
 import com.example.myapplication.data.model.Episode
 import com.example.myapplication.ui.episode.details.EpisodeDetailsActivity.Companion.EXTRA
 import org.w3c.dom.Text
@@ -44,13 +45,29 @@ class EpisodeDetailsFragment: Fragment(R.layout.fragment_episode_details) {
                 getCharactersByEpisode(it)
             }
             selectedEpisodeCharactersLiveData.observe(this@EpisodeDetailsFragment) { characterAdapter.submitList(it) }
-            selectedCharacterIdLiveData.observe(this@EpisodeDetailsFragment) {
-                CharacterDialogFragment(it).show(childFragmentManager, CharacterDialogFragment.TAG)
+            selectedCharacterIdLiveData.observe(this@EpisodeDetailsFragment) { index ->
+                val character = selectedEpisodeCharactersLiveData.value?.get(index)
+                character?.let {
+                    goToCharacterDetails(it)
+                }
             }
             progressBarVisibility.observe(this@EpisodeDetailsFragment) {
                 progressBar.visibility = if (it) View.VISIBLE else View.GONE
             }
         }
+    }
+
+    private fun goToCharacterDetails(character: Character) {
+        val bundle = Bundle()
+        bundle.putParcelable(CharacterDetailsFragment.EXTRA, character)
+
+        val characterDetailsFragment = CharacterDetailsFragment()
+        characterDetailsFragment.arguments = bundle
+
+        val transaction = parentFragmentManager.beginTransaction()
+        transaction.replace(R.id.fragment_container_view, characterDetailsFragment)
+        transaction.addToBackStack("characterDetails")
+        transaction.commit()
     }
 
     private fun initUi(view: View) {
